@@ -13,7 +13,7 @@ resource "aws_s3_bucket" "api_bucket" {
 resource "aws_s3_bucket_acl" "api_acl" {
   bucket = aws_s3_bucket.api_bucket.id
   acl    = var.acl
-    depends_on = [
+  depends_on = [
     aws_s3_bucket.api_bucket
   ]
 }
