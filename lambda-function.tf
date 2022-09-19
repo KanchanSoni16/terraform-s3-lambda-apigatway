@@ -44,4 +44,11 @@ resource "aws_lambda_permission" "allow_bucket" {
   function_name = aws_lambda_function.AWS_S3_API_Lambda_Function.arn
   principal     = "s3.amazonaws.com"
   source_arn    = "arn:aws:s3:::${aws_s3_bucket.api_bucket.id}"
+
+}
+
+
+resource "aws_cloudwatch_log_group" "cloudwatch_logs" {
+  name              = "/aws/lambda/${var.function_name}"
+  retention_in_days = 14
 }

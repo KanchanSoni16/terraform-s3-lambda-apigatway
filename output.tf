@@ -1,6 +1,10 @@
-#output "invoke_url" {
-#value = "${aws_api_gateway_stage.rest_api_stage.invoke_url}/${aws_api_gateway_resource.rest_api_resources.path_part}"
-#}
+output "invoke_url" {
+  value = "${aws_api_gateway_deployment.apideploy.invoke_url}/${aws_api_gateway_resource.rest_api_resources.path_part}"
+}
+
+output "base_url" {
+  value = aws_api_gateway_deployment.apideploy.invoke_url
+}
 
 output "bucket" {
   value = aws_s3_bucket.api_bucket.id
