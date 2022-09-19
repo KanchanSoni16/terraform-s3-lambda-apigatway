@@ -1,6 +1,6 @@
 
 # terraform backend creation
-
+/*
 terraform{
   backend "s3" {
     bucket = "statefile-bucket"
@@ -8,6 +8,6 @@ terraform{
     region = "us-east-1"
     dynamodb_table = "state-locking"
   }
-}
+}*/
 
 
