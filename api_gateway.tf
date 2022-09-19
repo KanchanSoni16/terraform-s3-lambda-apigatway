@@ -58,10 +58,7 @@ resource "aws_api_gateway_integration_response" "rest_api_integration_response" 
   response_templates = {
     "application/xml" = <<EOF
 #set($inputRoot = $input.path('$'))
-<?xml version="1.0" encoding="UTF-8"?>
-<message>
     $inputRoot.body
-</message>
 EOF
   }
 
