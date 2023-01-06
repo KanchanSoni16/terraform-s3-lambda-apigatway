@@ -1,9 +1,9 @@
 
 # terraform backend creation
-/*
-terraform{
+
+/*terraform{
   backend "s3" {
-    bucket = "statefile-bucket"
+    bucket = "statefile-bucket01"
     key    = "terraform.tfstate"
     region = "us-east-1"
     dynamodb_table = "state-locking"
